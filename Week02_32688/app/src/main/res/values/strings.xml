@@ -6,7 +6,7 @@
     <string name="angka2">Masukan Angka 2</string>
     <string name="titleAngka2">Angka 2 :</string>
 
-    <string name="titleHasil">Hasil :</string>
+    <string name="titleHasil">Hasil =</string>
     <string name="hasil"> </string>
 
 </resources>
