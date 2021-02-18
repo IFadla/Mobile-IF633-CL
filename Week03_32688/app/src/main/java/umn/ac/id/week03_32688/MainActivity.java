@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 int jumlahKata = mDaftarKata.size() ;
                 mDaftarKata.addLast("Kata " + (jumlahKata + 1) +
-                        " telah ditambahkan");
+                        " telah ditambahkan!");
                 Objects.requireNonNull
                         (mRecyclerView.getAdapter()).notifyItemInserted(jumlahKata);
                 mRecyclerView.smoothScrollToPosition(jumlahKata);
