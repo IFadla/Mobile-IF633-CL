@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Week04_32688</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="show_fragment_satu">TEXT INI BERASAL DARI FRAGMENT 1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="show_fragment_dua">TEXT INI BERASAL DARI FRAGMENT 2</string>
+</resources>
