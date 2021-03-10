@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewProfileActivity"
+    android:orientation="vertical"
+    android:background="@color/blackOne"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/photo_profile"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fadla Ichsan ( CL )"
+                android:textColor="@color/whiteOne"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00000032688"
+                android:textColor="@color/whiteOne"
+                android:textAlignment="center"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This application is made based on several references :"
+            android:textColor="@color/whiteOne"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=FFL-k9fFYfI"
+            android:textColor="@color/grayOne"
+            android:layout_marginHorizontal="40dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=FFL-k9fFYfI"
+            android:textColor="@color/grayOne"
+            android:layout_marginHorizontal="40dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=FFL-k9fFYfI"
+            android:textColor="@color/grayOne"
+            android:layout_marginHorizontal="40dp"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Visit My Linked In"
+            android:textSize="16dp"
+            android:textAllCaps="true"
+
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/orange"
+
+            android:autoLink="web"
+            android:clickable="true"
+            android:onClick="goToMyLinkedIn"/>
+    </LinearLayout>
+
+<!--    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">-->
+<!--        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/select" />-->
+<!--        <Button -->
+<!--            android:clickable="true"-->
+<!--            android:autoLink="web" -->
+<!--            android:cursorVisible="true" -->
+<!--            android:linksClickable="true" -->
+<!--            android:onClick="goToSo"></Button>-->
+<!--        -->
+<!--        <Button -->
+
+<!--            android:autoLink="web" -->
+<!--            android:clickable="true" -->
+<!--            android:onClick="goToSu"></Button>-->
+<!--    </LinearLayout>-->
+
+
+</LinearLayout>

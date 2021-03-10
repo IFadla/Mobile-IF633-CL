@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@drawable/bg_start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enjoy the hottest"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="music with us!"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="30dp"/>
+
+        <Button
+            android:id="@+id/goToLogin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:onClick="moveToLogin"
+            android:text="Login"
+            android:textSize="16dp"
+            android:textAllCaps="true"
+
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/orange"/>
+
+        <Button
+            android:id="@+id/goToViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:onClick="moveToViewProfile"
+            android:text="View Profile"
+            android:textSize="16dp"
+            android:textAllCaps="true"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/blackOne"
+            app:strokeColor="@color/orange"
+            app:strokeWidth="2dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
