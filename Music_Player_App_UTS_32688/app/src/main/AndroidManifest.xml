@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="umn.ac.id.music_player_app_uts_32688">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Music_Player_App_UTS_32688">
-
+        <activity android:name=".SplashScreenActivity"></activity>
+        <activity android:name=".PlayerActivity" />
         <activity
             android:name=".ListMusicActivity"
-            android:label="@string/titleListMusic"/>
+            android:label="@string/titleListMusic" />
         <activity
             android:name=".ViewProfileActivity"
             android:label="@string/titleProfile"
@@ -30,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
