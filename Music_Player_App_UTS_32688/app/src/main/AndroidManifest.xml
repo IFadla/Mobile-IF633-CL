@@ -12,7 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Music_Player_App_UTS_32688">
-        <activity android:name=".SplashScreenActivity"></activity>
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.Music_Player_App_UTS_32688.noActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".PlayerActivity" />
         <activity
             android:name=".ListMusicActivity"
@@ -28,11 +39,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Music_Player_App_UTS_32688.noActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
