@@ -24,7 +24,7 @@ public class ViewProfileActivity extends AppCompatActivity {
     public void goToMyLinkedIn (View view) {
         goToUrlLinkedIn ( "https://www.linkedin.com/in/fadla-ichsan-a4a067207/");
     }
-
+//    https://drive.google.com/file/d/1_w4goFTQ2H1MXrxLvVYyNuPHOQ8ZfIPO/view?usp=sharing
     public void goToAllReferences(View view) {
         Intent intent = new Intent(this, ReferencesActivity.class);
         startActivity(intent);

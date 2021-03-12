@@ -5,10 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,6 +46,7 @@ public class ListMusicActivity extends AppCompatActivity {
 //    String[] items;
     ListView myListViewForSongs;
     String[] items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +57,58 @@ public class ListMusicActivity extends AppCompatActivity {
 //        runtimePermission();
         myListViewForSongs = (ListView) findViewById(R.id.mySongListView);
         runtimePermission();
+
+        String sayWelcome = "Fadla Ichsan" + "\n" + "00000032688";
+
+//        showPopupWelcome();
+        showAlert(this, sayWelcome);
     }
+
+    public static void showAlert(Activity activity, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        builder.setIcon(R.drawable.ic_done);
+        builder.setMessage(message);
+        builder.setTitle("Login Successfully!");
+        builder.setNegativeButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alert = builder.show();
+        TextView messageText = (TextView)alert.findViewById(android.R.id.message);
+        messageText.setGravity(Gravity.CENTER);
+//        messageText.setTextColor(Color.BLACK);
+        messageText.setTextSize(18);
+    }
+
+//    private void showPopupWelcome() {
+//        AlertDialog.Builder builder = new AlertDialog.Builder( this );
+//                    builder.setIcon(R.drawable.ic_done);
+//                    builder.setTitle("Login Successfully!");
+//                    builder.setMessage("Welcome to O BEATS!");
+//
+//                    builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            dialog.cancel();
+//                        }
+//                    });
+//                    AlertDialog alertDialog = builder.create();
+//                    alertDialog.show();
+
+
+//        new AlertDialog.Builder(this)
+//                .setTitle("Welcome")
+//                .setMessage("Fadla Ichsan" + "\n" +
+//                        "00000032688")
+//                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                    }
+//                }).create().show();
+//    }
 
     public void runtimePermission() {
         Dexter.withContext(this)

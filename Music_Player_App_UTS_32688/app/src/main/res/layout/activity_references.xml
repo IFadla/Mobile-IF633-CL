@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReferencesActivity">
+    tools:context=".ReferencesActivity"
+    android:orientation="vertical"
+    android:background="@color/blackOne"
+    android:gravity="bottom">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Youtube :"
+            android:textColor="@color/whiteOne"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=tlOGecRQeOo&amp;t"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=74BMukDxEr8"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=NM9RbDGl5C8&amp;t"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=jXtof6OUtcE"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=q7TETeyChhw"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=jXtof6OUtcE"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.youtube.com/watch?v=q7TETeyChhw"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mockup :"
+            android:textColor="@color/whiteOne"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-	https://www.figma.com/file/r9tm2DE1W9e2GtgDJvR7Ag/Music-Player-APP?node-id=0%3A1"
+            android:textColor="@color/whiteOne"
+            android:textSize="12dp"
+            android:layout_marginHorizontal="55dp"
+            android:layout_marginBottom="6dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/btnGoToReferences"
+            android:onClick="goToReferenes"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="See Reference Pdf Version"
+            android:textSize="12dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/whiteOne"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="@color/orange"/>
+    </LinearLayout>
+
+</LinearLayout>
