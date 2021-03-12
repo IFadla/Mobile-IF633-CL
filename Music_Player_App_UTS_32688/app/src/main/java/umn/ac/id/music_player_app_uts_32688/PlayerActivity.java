@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.gauravk.audiovisualizer.visualizer.BarVisualizer;
+//import com.gauravk.audiovisualizer.visualizer.BarVisualizer;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class PlayerActivity extends AppCompatActivity {
     Button btnPlay, btnNext, btnPrev, btnFf, btnFr;
     TextView txtsName, textsStart, txtsStop;
     SeekBar seekMusic;
-    BarVisualizer visualizer;
+//    BarVisualizer visualizer;
     ImageView imageViews;
 
     String sname;
@@ -47,20 +47,20 @@ public class PlayerActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onDestroy() {
-        if (visualizer != null) {
-            visualizer.release();
-        }
-        super.onDestroy();
-    }
+//    @Override
+//    protected void onDestroy() {
+//        if (visualizer != null) {
+//            visualizer.release();
+//        }
+//        super.onDestroy();
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
-        getSupportActionBar().setTitle("Now Playing");
+        getSupportActionBar().setTitle("NOW PLAYING");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -73,7 +73,7 @@ public class PlayerActivity extends AppCompatActivity {
         textsStart = findViewById(R.id.txtStart);
         txtsStop = findViewById(R.id.txtStop);
         seekMusic = findViewById(R.id.seekBar);
-        visualizer = findViewById(R.id.blast);
+//        visualizer = findViewById(R.id.blast);
         imageViews = findViewById(R.id.imageView);
 
         if (mediaPlayer != null) {
@@ -184,10 +184,10 @@ public class PlayerActivity extends AppCompatActivity {
                 btnPlay.setBackgroundResource(R.drawable.ic_pause);
                 startAnimation(imageViews);
 
-                int audioSessionId = mediaPlayer.getAudioSessionId();
-                if (audioSessionId != 1) {
-                    visualizer.setAudioSessionId(audioSessionId);
-                }
+//                int audioSessionId = mediaPlayer.getAudioSessionId();
+//                if (audioSessionId != 1) {
+//                    visualizer.setAudioSessionId(audioSessionId);
+//                }
             }
         });
 
@@ -199,10 +199,10 @@ public class PlayerActivity extends AppCompatActivity {
             }
         });
 
-        int audioSessionId = mediaPlayer.getAudioSessionId();
-        if (audioSessionId != 1) {
-            visualizer.setAudioSessionId(audioSessionId);
-        }
+//        int audioSessionId = mediaPlayer.getAudioSessionId();
+//        if (audioSessionId != 1) {
+//            visualizer.setAudioSessionId(audioSessionId);
+//        }
 
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -219,10 +219,10 @@ public class PlayerActivity extends AppCompatActivity {
                 btnPlay.setBackgroundResource(R.drawable.ic_pause);
                 startAnimation(imageViews);
 
-                int audioSessionId = mediaPlayer.getAudioSessionId();
-                if (audioSessionId != 1) {
-                    visualizer.setAudioSessionId(audioSessionId);
-                }
+//                int audioSessionId = mediaPlayer.getAudioSessionId();
+//                if (audioSessionId != 1) {
+//                    visualizer.setAudioSessionId(audioSessionId);
+//                }
             }
         });
 

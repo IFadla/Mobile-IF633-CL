@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     builder.setIcon(R.drawable.ic_done);
                     builder.setTitle("Login Successfully!");
-                    builder.setMessage("Welcome to O-Beats!");
+                    builder.setMessage("Welcome to O BEATS!");
 
                     builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
                         @Override

@@ -175,7 +175,7 @@ public class ListMusicActivity extends AppCompatActivity {
     }
 
     private void moveToMyProfile() {
-        Intent intent = new Intent(this, PlayerActivity.class);
+        Intent intent = new Intent(this, ViewProfileActivity.class);
         startActivity(intent);
     }
 
