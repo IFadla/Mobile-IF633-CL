@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log in now and listen to music"
+            android:text="Login now and listen to music"
             android:textColor="@color/grayOne"
             android:textSize="16dp"
             android:layout_marginRight="40dp"
@@ -95,7 +95,7 @@
                 android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username"
+                android:hint="Password"
                 android:textSize="16dp"
                 android:inputType="textPassword"
                 android:textColorHint="@color/grayTwo"

@@ -41,22 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (inptUsername.getText().toString().equals("admin") && inptPassword.getText().toString().equals("admin")) {
+                if (inptUsername.getText().toString().equals("uasmobile") && inptPassword.getText().toString().equals("uasmobilegenap")) {
                     moveToListMusic();
-//                    AlertDialog.Builder builder = new AlertDialog.Builder( LoginActivity.this );
-//                    builder.setIcon(R.drawable.ic_done);
-//                    builder.setTitle("Login Successfully!");
-//                    builder.setMessage("Welcome to O BEATS!");
-//
-//                    builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.cancel();
-//                            moveToListMusic();
-//                        }
-//                    });
-//                    AlertDialog alertDialog = builder.create();
-//                    alertDialog.show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Invalid Username & Password", Toast.LENGTH_SHORT).show();
                 }

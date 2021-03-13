@@ -42,8 +42,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListMusicActivity extends AppCompatActivity {
-//    ListView listView;
-//    String[] items;
     ListView myListViewForSongs;
     String[] items;
 
@@ -52,15 +50,11 @@ public class ListMusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_music);
 
-//        listView = findViewById(R.id.listViewSong);
-//
-//        runtimePermission();
         myListViewForSongs = (ListView) findViewById(R.id.mySongListView);
         runtimePermission();
 
         String sayWelcome = "Fadla Ichsan" + "\n" + "00000032688";
 
-//        showPopupWelcome();
         showAlert(this, sayWelcome);
     }
 
@@ -78,37 +72,8 @@ public class ListMusicActivity extends AppCompatActivity {
         AlertDialog alert = builder.show();
         TextView messageText = (TextView)alert.findViewById(android.R.id.message);
         messageText.setGravity(Gravity.CENTER);
-//        messageText.setTextColor(Color.BLACK);
         messageText.setTextSize(18);
     }
-
-//    private void showPopupWelcome() {
-//        AlertDialog.Builder builder = new AlertDialog.Builder( this );
-//                    builder.setIcon(R.drawable.ic_done);
-//                    builder.setTitle("Login Successfully!");
-//                    builder.setMessage("Welcome to O BEATS!");
-//
-//                    builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.cancel();
-//                        }
-//                    });
-//                    AlertDialog alertDialog = builder.create();
-//                    alertDialog.show();
-
-
-//        new AlertDialog.Builder(this)
-//                .setTitle("Welcome")
-//                .setMessage("Fadla Ichsan" + "\n" +
-//                        "00000032688")
-//                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
-//                    }
-//                }).create().show();
-//    }
 
     public void runtimePermission() {
         Dexter.withContext(this)
@@ -124,22 +89,6 @@ public class ListMusicActivity extends AppCompatActivity {
                         permissionToken.continuePermissionRequest();
                     }
                 }).check();
-//                .withListener(new PermissionListener() {
-//                    @Override
-//                    public void onPermissionGranted(PermissionGrantedResponse response) {
-//                        display();
-//                    }
-//
-//                    @Override
-//                    public void onPermissionDenied(PermissionDeniedResponse response) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken token) {
-//                        token.continuePermissionRequest();
-//                    }
-//                }).check();
     }
 
     public ArrayList<File> findSong(File file) {
@@ -169,8 +118,6 @@ public class ListMusicActivity extends AppCompatActivity {
             items[i] = mySongs.get(i).getName().toString().replace(".mp3", "").replace(".wav", "");
         }
 
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
-//        myListViewForSongs.setAdapter(myAdapter);
         customAdapter customAdapter = new customAdapter();
         myListViewForSongs.setAdapter(customAdapter);
 
@@ -243,55 +190,4 @@ public class ListMusicActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
-
-    // Permission file
-//    public void runtimePermission() {
-//        Dexter.withContext(this).withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-//                .withListener(new PermissionListener() {
-//                    @Override
-//                    public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-//                        displaySongs();
-//                    }
-//
-//                    @Override
-//                    public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onPermissionRationaleShouldBeShown(PermissionRequest permissionRequest, PermissionToken permissionToken) {
-//                        permissionToken.continuePermissionRequest();
-//                    }
-//                }).check();
-//    }
-//
-//    public ArrayList<File> findSong (File file) {
-//        ArrayList<File> arrayList = new ArrayList<>();
-//
-//        File[] files = file.listFiles();
-//
-//        for (File singlefile: files) {
-//            if (singlefile.isDirectory() && !singlefile.isHidden()) {
-//                arrayList.addAll(findSong(singlefile));
-//            }
-//            else {
-//                if (singlefile.getName().endsWith(".mp3") || singlefile.getName().endsWith(".wab")) {
-//                    arrayList.add(singlefile);
-//                }
-//            }
-//        }
-//        return arrayList;
-//    }
-//
-//    void displaySongs() {
-//        final ArrayList<File> mySongs = findSong(Environment.getExternalStorageDirectory());
-//
-//        items = new String[mySongs.size()];
-//        for (int i = 0; i < mySongs.size(); i++) {
-//            items[1] = mySongs.get(i).getName().toString().replace(".mp3", "").replace(".wav", "");
-//
-//        }
-//        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, items);
-//        listView.setAdapter(myAdapter);
-//    }
 }
