@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MenuUtamaActivity"
+    android:gravity="center"
+    android:paddingHorizontal="40dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tutorial"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/goToMenggunkanKamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menggunakan Kamera"
+        android:layout_marginBottom="10dp"
+        android:onClick="goToMenggunakanKamera"/>
+    <Button
+        android:id="@+id/goToGaleriVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Galeri Video"
+        android:onClick="goToGaleriVideo"/>
+</LinearLayout>
