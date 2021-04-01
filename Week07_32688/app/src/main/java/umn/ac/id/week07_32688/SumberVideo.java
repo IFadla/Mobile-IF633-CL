@@ -8,6 +8,7 @@ public class SumberVideo implements Serializable {
     private String judul;
     private String keterangan;
     private String videoURI;
+    //method
     public SumberVideo(String judul, String keterangan,
                        String videoURI){
         this.judul = judul;
